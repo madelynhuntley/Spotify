@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 import axios from "axios";
-
+import "../styles/app.scss";
 import useAuth from "../useAuth";
 import Player from "./Player";
 
@@ -91,7 +91,10 @@ export default function Dashboard(props) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+      <div
+        className="flex-grow-1 my-2"
+        style={{ overflowY: "auto", color: "white" }}
+      >
         {searchResults.map((track) => {
           const handlePlay = () => {
             chooseTrack(track);
@@ -105,7 +108,7 @@ export default function Dashboard(props) {
               >
                 <img
                   src={track.albumUrl}
-                  style={{ height: "64px", width: "64px" }}
+                  style={{ height: "64px", width: "64px", marginRight: "1em" }}
                   alt="imahe"
                 />
                 <div className="ml-3">
@@ -113,12 +116,14 @@ export default function Dashboard(props) {
                   <div>{track.artist}</div>
                 </div>
               </div>
-              ;
             </div>
           );
         })}
         {searchResults.length === 0 && (
-          <div className="text-center" style={{ whiteSpace: "pre" }}>
+          <div
+            className="text-center"
+            style={{ whiteSpace: "pre", color: "white" }}
+          >
             {lyrics}
           </div>
         )}

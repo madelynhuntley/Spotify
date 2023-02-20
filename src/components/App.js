@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "../styles/app.scss";
 import Login from "./Login";
 import Dashboard from "./Dashboard";
 
