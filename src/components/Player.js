@@ -13,6 +13,7 @@ export default function Player({ accessToken, trackUri }) {
   return (
     <div>
       <SpotifyPlayer
+        styles={{ color: "white", backgroundColor: "black" }}
         token={accessToken}
         showSaveIcon
         callback={(state) => {

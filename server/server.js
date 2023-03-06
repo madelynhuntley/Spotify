@@ -62,6 +62,6 @@ app.get("/lyrics", async (req, res) => {
   res.json({ lyrics });
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Listening on port ${PORT}`);
+// });

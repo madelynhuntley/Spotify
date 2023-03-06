@@ -4,7 +4,7 @@ import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 import axios from "axios";
 import "../styles/app.scss";
-import useAuth from "../useAuth";
+import useAuth from "../hooks/useAuth";
 import Player from "./Player";
 
 const spotifyApi = new SpotifyWebApi({
